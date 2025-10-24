@@ -1,6 +1,220 @@
+@font-face {
+    font-family: "Gabriela-Regular";
+    src: url("./internal/Gabriela/Gabriela-Regular.ttf") format("truetype");
+}
+
+:root {
+    --back-color: #5D4AE3;
+    --vety-light-gray-color: #FCFCFC;
+    --dark-text-color: #212121;
+    --answer-back-color: #6E5CE6;
+    --answer-variant-back-color: #8B7DEB;
+    --light-red-color: #FF8888;
+}
+
 body {
     margin: 0;
     padding: 0;
 
-    background: #292929;
+    background: var(--back-color);
+    color: #FFFFFF;
+}
+
+.greeting {
+    margin-top: 50px;
+    text-align: center;
+
+    font-family: Gabriela-Regular, sans-serif;
+    font-size: 40px;
+}
+
+.grid-card {
+    box-sizing: border-box;
+    width: 1090px;
+    margin: 0 auto;
+    display: flow-root; /*Ограничение маржина детей*/
+}
+
+.check-answer {
+    display: none;
+}
+
+.display-answers-block {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 80px;
+}
+
+.display-answers {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+
+    padding: 20px 30px; /* можно добавить боковые отступы для лучшего вида */
+    border: 1px solid var(--vety-light-gray-color);
+    border-radius: 30px;
+
+    font-family: Gabriela-Regular, sans-serif;
+    font-size: 40px;
+
+    transition:
+            background-color 0.15s ease,
+            border-color 0.15s ease,
+            transform 0.1s ease;
+}
+
+.display-answers:hover {
+    background-color: var(--vety-light-gray-color);
+    color: var(--answer-variant-back-color); /* или другой контрастный цвет */
+    border-color: var(--answer-variant-back-color);
+}
+
+.display-answers:active {
+    transform: scale(0.98); /* лёгкое уменьшение — эффект нажатия */
+    background-color: var(--answer-variant-back-color); /* или более тёмный оттенок */
+    color: var(--vety-light-gray-color);
+}
+
+.box-card {
+    box-sizing: border-box;
+    height: 100%;
+    margin: 30px auto 0 0;
+    position: relative; /*Черточка*/
+    display: flow-root;
+}
+
+.box-card::before { /*Черточка*/
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 16px;
+    right: 16px;
+    height: 1px;
+    background: var(--vety-light-gray-color);
+}
+
+.question-number {
+    box-sizing: border-box;
+    height: auto;
+    padding-left: 30px;
+
+    font-family: Gabriela-Regular, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+
+    display: flow-root;
+}
+
+.question-text {
+    box-sizing: border-box;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 25px;
+
+    background: var(--vety-light-gray-color);
+    color: var(--dark-text-color);
+    font-family: Gabriela-Regular, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.question-answers {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0 40px 40px 40px;
+
+    align-items: stretch;
+}
+
+.answer-to-question {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 calc(50% - 8px);
+}
+
+.answer-to-question > label {
+    box-sizing: border-box;
+    cursor: pointer;
+
+    background: var(--answer-back-color);
+
+    width: 100%;
+    word-break: break-word;
+    padding: 10px;
+    border: 1px solid var(--vety-light-gray-color);
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center; /* выравнивание по вертикали (по высоте) */
+    gap: 16px; /* отступ между детьми */
+}
+
+
+.answer-to-question input[type="radio"],
+.answer-to-question input[type="checkbox"]{ /*Убираем кружочек*/
+    position: absolute; /* вынимаем из потока */
+    opacity: 0; /* делаем невидимым */
+    width: 0;
+    height: 0;
+    margin: 0;
+    pointer-events: none; /* защита: клики идут на label */
+}
+
+.answer-block {
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    gap: 16px; /* или сколько нужно */
+    flex: 1; /* чтобы занял оставшееся место */
+    min-width: 0; /* для корректного word-break внутри flex */
+}
+
+/*Заливка цветом врианта ответа при его выборе*/
+.answer-to-question input[type="radio"]:checked ~ .answer-block .answer-variant,
+.answer-to-question input[type="checkbox"]:checked ~ .answer-block .answer-variant {
+    border-color: yellow;
+}
+
+.answer-variant {
+    box-sizing: border-box;
+
+    padding: 7px 15px;
+    border: 2px solid var(--vety-light-gray-color);
+    border-radius: 25px;
+
+    background: var(--answer-variant-back-color);
+    font-family: Gabriela-Regular, sans-serif;
+    font-size: 25px;
+}
+
+.answer-text {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    font-family: Gabriela-Regular, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.code-block-6 {
+    box-sizing: border-box;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.answer-result {
+    display: block;
+    box-sizing: border-box;
+
+    width: 10px; /*При изменении отображения результата ответа, увеличить*/
+    margin: 6px 20px 0 0;
+    font-family: Gabriela-Regular, sans-serif;
+    font-size: 18px;
+
+    color: transparent;
 }

@@ -1,14 +1,518 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" lang="ru">
+    <link rel="stylesheet" href="./check-answers.css" lang="ru">
     <title>HW3</title>
 </head>
+
 <body>
-    <div id="app">
-        
+<div class="greeting">
+    У нас есть свой Quiz дома
+</div>
+
+<input type="checkbox" id="check-1" class="check-answer"/>
+
+<div class="grid-card">
+    <div class="box-card">
+        <p class="question-number">Вопрос 1</p>
+        <div class="question-text">Что произойдёт, если в документе есть два элемента с одинаковым id</div>
+        <div class="question-answers question-answers-1">
+            <div class="answer-to-question">
+                <label for="q1-a">
+                    <input type="radio" name="q1" id="q1-a" value="A"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">A</div>
+                        <p class="answer-text">Браузер автомагически изменит второй id</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q1-b">
+                    <input type="radio" name="q1" id="q1-b" value="B"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">B</div>
+                        <p class="answer-text">Вернет первый найденый</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q1-c">
+                    <input type="radio" name="q1" id="q1-c" value="C"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">C</div>
+                        <p class="answer-text">Страница не загрузится из-за ошибки парсинга</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q1-d">
+                    <input type="radio" name="q1" id="q1-d" value="D"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">D</div>
+                        <p class="answer-text">Оба элемента вернутся как массив</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+        </div>
     </div>
+</div>
+
+<div class="grid-card">
+    <div class="box-card">
+        <p class="question-number">Вопрос 2</p>
+        <div class="question-text">Что НЕ приводит к тому, что inline-элемент начнёт вести себя как block или inline-block<br>(Доступен множественный выбор)</div>
+        <div class="question-answers question-answers-2">
+            <div class="answer-to-question">
+                <label for="q2-a">
+                    <input type="checkbox" name="q2" id="q2-a" value="A"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">A</div>
+                        <p class="answer-text">display: inline-block</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q2-b">
+                    <input type="checkbox" name="q2" id="q2-b" value="B"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">B</div>
+                        <p class="answer-text">width: 100%</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q2-c">
+                    <input type="checkbox" name="q2" id="q2-c" value="C"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">C</div>
+                        <p class="answer-text">padding: 20px 0</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q2-d">
+                    <input type="checkbox" name="q2" id="q2-d" value="D"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">D</div>
+                        <p class="answer-text">float: left</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid-card">
+    <div class="box-card">
+        <p class="question-number">Вопрос 3</p>
+        <div class="question-text">Что делает атрибут defer у тега script</div>
+        <div class="question-answers question-answers-3">
+            <div class="answer-to-question">
+                <label for="q3-a">
+                    <input type="radio" name="q3" id="q3-a" value="A"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">A</div>
+                        <p class="answer-text">Скрипт выполнится только после полной загрузки всех изображений</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q3-b">
+                    <input type="radio" name="q3" id="q3-b" value="B"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">B</div>
+                        <p class="answer-text">Скрипт будет выполнен асинхронно, без гарантии порядка</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q3-c">
+                    <input type="radio" name="q3" id="q3-c" value="C"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">C</div>
+                        <p class="answer-text">Скрипт выполнится после полной загрузки HTML, в порядке следования</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q3-d">
+                    <input type="radio" name="q3" id="q3-d" value="D"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">D</div>
+                        <p class="answer-text"> Скрипт загрузится и выполнится немедленно, не блокируя HTML</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid-card">
+    <div class="box-card">
+        <p class="question-number">Вопрос 4</p>
+        <div class="question-text">Что выбирает селектор E ~ F</div>
+        <div class="question-answers question-answers-4">
+            <div class="answer-to-question">
+                <label for="q4-a">
+                    <input type="radio" name="q4" id="q4-a" value="A"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">A</div>
+                        <p class="answer-text">Все элементы F, которые идут после E на том же уровне вложенности</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q4-b">
+                    <input type="radio" name="q4" id="q4-b" value="B"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">B</div>
+                        <p class="answer-text">Только первый элемент F после E</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q4-c">
+                    <input type="radio" name="q4" id="q4-c" value="C"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">C</div>
+                        <p class="answer-text">Все элементы F, имеющие общего родителя с E</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q4-d">
+                    <input type="radio" name="q4" id="q4-d" value="D"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">D</div>
+                        <p class="answer-text"> Все элементы F, на одном уровне вложенности с E</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid-card">
+    <div class="box-card">
+        <p class="question-number">Вопрос 5</p>
+        <div class="question-text">Что определяет «каскад» в CSS</div>
+        <div class="question-answers question-answers-5">
+            <div class="answer-to-question">
+                <label for="q5-a">
+                    <input type="radio" name="q5" id="q5-a" value="A"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">A</div>
+                        <p class="answer-text">Последовательность применения анимаций</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q5-b">
+                    <input type="radio" name="q5" id="q5-b" value="B"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">B</div>
+                        <p class="answer-text"> Порядок загрузки внешних таблиц стилей</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q5-c">
+                    <input type="radio" name="q5" id="q5-c" value="C"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">C</div>
+                        <p class="answer-text">Приоритет стилей на основе источника, специфичности и порядка в коде</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q5-d">
+                    <input type="radio" name="q5" id="q5-d" value="D"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">D</div>
+                        <p class="answer-text">Иерархию вложенности HTML-элементов</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid-card">
+    <div class="box-card">
+        <p class="question-number">Вопрос 6</p>
+        <div class="question-text">Что выведет код:<br>
+            <div class="code-block-6">const obj = {};<br>
+                Object.defineProperty(obj, 'x', { value: 1 });<br>
+                obj.x = 2;<br>
+                console.log(obj.x);
+            </div>
+        </div>
+        <div class="question-answers question-answers-6">
+            <div class="answer-to-question">
+                <label for="q6-a">
+                    <input type="radio" name="q6" id="q6-a" value="A"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">A</div>
+                        <p class="answer-text">2</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q6-b">
+                    <input type="radio" name="q6" id="q6-b" value="B"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">B</div>
+                        <p class="answer-text">1</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q6-c">
+                    <input type="radio" name="q6" id="q6-c" value="C"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">C</div>
+                        <p class="answer-text">undefined</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q6-d">
+                    <input type="radio" name="q6" id="q6-d" value="D"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">D</div>
+                        <p class="answer-text">Ошибка в strict mode, 1 — в слабом</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid-card">
+    <div class="box-card">
+        <p class="question-number">Вопрос 7</p>
+        <div class="question-text">Что делает Object.preventExtensions(obj)</div>
+        <div class="question-answers question-answers-7">
+            <div class="answer-to-question">
+                <label for="q7-a">
+                    <input type="radio" name="q7" id="q7-a" value="A"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">A</div>
+                        <p class="answer-text">Делает все свойства незаписываемыми</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q7-b">
+                    <input type="radio" name="q7" id="q7-b" value="B"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">B</div>
+                        <p class="answer-text">Удаляет все неперечисляемые свойства</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q7-c">
+                    <input type="radio" name="q7" id="q7-c" value="C"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">C</div>
+                        <p class="answer-text">Замораживает объект полностью</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q7-d">
+                    <input type="radio" name="q7" id="q7-d" value="D"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">D</div>
+                        <p class="answer-text">Запрещает добавление новых свойств в объект</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid-card">
+    <div class="box-card">
+        <p class="question-number">Вопрос 8</p>
+        <div class="question-text">Какие утверждения о лексическом окружении верны</div>
+        <div class="question-answers question-answers-8">
+            <div class="answer-to-question">
+                <label for="q8-a">
+                    <input type="checkbox" name="q8" id="q8-a" value="A"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">A</div>
+                        <p class="answer-text">Замыкание сохраняет доступ к переменным даже после завершения родительской функции</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q8-b">
+                    <input type="checkbox" name="q8" id="q8-b" value="B"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">B</div>
+                        <p class="answer-text">Лексическое окружение создаётся только при выполнении eval</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q8-c">
+                    <input type="checkbox" name="q8" id="q8-c" value="C"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">C</div>
+                        <p class="answer-text">Переменные ищутся во внешних окружениях, если не найдены во внутреннем</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q8-d">
+                    <input type="checkbox" name="q8" id="q8-d" value="D"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">D</div>
+                        <p class="answer-text">Значение this также является частью лексического окружения</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid-card">
+    <div class="box-card">
+        <p class="question-number">Вопрос 9</p>
+        <div class="question-text">Где потеряется контекст, даже если метод принадлежал объекту?<br>const obj = { x: 5, f() { return this.x; } };<br>(Множественный выбор)</div>
+        <div class="question-answers question-answers-9">
+            <div class="answer-to-question">
+                <label for="q9-a">
+                    <input type="checkbox" name="q9" id="q9-a" value="A"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">A</div>
+                        <p class="answer-text">const g = obj.f<br> g()</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q9-b">
+                    <input type="checkbox" name="q9" id="q9-b" value="B"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">B</div>
+                        <p class="answer-text">[obj.f][0]()</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q9-c">
+                    <input type="checkbox" name="q9" id="q9-c" value="C"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">C</div>
+                        <p class="answer-text">({f: obj.f}).f()</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q9-d">
+                    <input type="checkbox" name="q9" id="q9-d" value="D"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">D</div>
+                        <p class="answer-text">obj.f.call(null)</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid-card">
+    <div class="box-card">
+        <p class="question-number">Вопрос 10</p>
+        <div class="question-text">Что верно про Object.freeze(obj)</div>
+        <div class="question-answers question-answers-10">
+            <div class="answer-to-question">
+                <label for="q8-a">
+                    <input type="checkbox" name="q10" id="q10-a" value="A"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">A</div>
+                        <p class="answer-text">Замораживает вложенные объекты</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q10-b">
+                    <input type="checkbox" name="q10" id="q10-b" value="B"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">B</div>
+                        <p class="answer-text">Блокирует добавление новых свойств</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q10-c">
+                    <input type="checkbox" name="q10" id="q10-c" value="C"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">C</div>
+                        <p class="answer-text">Делает все свойства невоспроизводимыми<br>(enumerable: false)</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+            <div class="answer-to-question">
+                <label for="q10-d">
+                    <input type="checkbox" name="q10" id="q10-d" value="D"/>
+                    <div class="answer-block">
+                        <div class="answer-variant">D</div>
+                        <p class="answer-text">Запрещает удалять свойства</p>
+                    </div>
+                    <span class="answer-result"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="display-answers-block">
+    <label class="display-answers" for="check-1">Проверить</label>
+</div>
 </body>
 </html>
