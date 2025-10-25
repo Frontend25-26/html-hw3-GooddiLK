@@ -30,7 +30,7 @@ body {
 
 .grid-card {
     box-sizing: border-box;
-    margin: 0 275px;
+    margin: 0 18%;
     display: flow-root; /*Ограничение маржина детей*/
 }
 
