@@ -120,18 +120,19 @@ body {
 
 .question-answers {
     box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+
     padding: 0 40px 40px 40px;
 
-    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap; /* Перенос на следующую строку*/
+    gap: 16px;
 }
 
 .answer-to-question {
     box-sizing: border-box;
+
     display: flex;
-    flex: 0 0 calc(50% - 8px);
+    flex-basis: calc(50% - 8px); /* Размер детей*/
 }
 
 .answer-to-question > label {
@@ -148,7 +149,7 @@ body {
 
     display: flex;
     align-items: center; /* выравнивание по вертикали (по высоте) */
-    gap: 16px; /* отступ между детьми */
+    gap: 16px;           /* отступ между детьми */
 }
 
 
@@ -167,8 +168,8 @@ body {
 
     display: flex;
     align-items: center;
-    gap: 16px; /* или сколько нужно */
-    flex: 1; /* чтобы занял оставшееся место */
+    gap: 16px;
+    flex: 1;      /* чтобы занял оставшееся место */
     min-width: 0; /* для корректного word-break внутри flex */
 }
 
