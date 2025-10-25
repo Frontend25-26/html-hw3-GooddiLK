@@ -50,7 +50,7 @@ body {
     text-align: center;
     cursor: pointer;
 
-    padding: 20px 30px; /* можно добавить боковые отступы для лучшего вида */
+    padding: 20px 30px;
     border: 1px solid var(--vety-light-gray-color);
     border-radius: 30px;
 
@@ -65,13 +65,13 @@ body {
 
 .display-answers:hover {
     background-color: var(--vety-light-gray-color);
-    color: var(--answer-variant-back-color); /* или другой контрастный цвет */
+    color: var(--answer-variant-back-color);
     border-color: var(--answer-variant-back-color);
 }
 
 .display-answers:active {
-    transform: scale(0.98); /* лёгкое уменьшение — эффект нажатия */
-    background-color: var(--answer-variant-back-color); /* или более тёмный оттенок */
+    transform: scale(0.98);
+    background-color: var(--answer-variant-back-color);
     color: var(--vety-light-gray-color);
 }
 
@@ -156,7 +156,7 @@ body {
 .answer-to-question input[type="radio"],
 .answer-to-question input[type="checkbox"]{ /*Убираем кружочек*/
     position: absolute; /* вынимаем из потока */
-    opacity: 0; /* делаем невидимым */
+    opacity: 0;         /* делаем невидимым */
     width: 0;
     height: 0;
     margin: 0;
