@@ -74,6 +74,10 @@ body {
     color: var(--vety-light-gray-color);
 }
 
+fieldset {
+    border: 0;
+}
+
 .box-card {
     box-sizing: border-box;
     height: 100%;

@@ -37,14 +37,14 @@
 }
 
 
-.check-answer:checked ~ .grid-card .question-answers-2 input:not([value="C"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-8 input:not([value="A"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-8 input:not([value="C"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-9 input:not([value="A"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-9 input:not([value="B"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-9 input:not([value="D"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-10 input:not([value="B"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-10 input:not([value="D"]):checked ~ .answer-result::after{
+.check-answer:checked ~ .grid-card .question-answers-2:has(input:checked) input[value="C"]:not(:checked) ~ .answer-result::after,
+.check-answer:checked ~ .grid-card .question-answers-8:has(input:checked) input[value="A"]:not(:checked) ~ .answer-result::after,
+.check-answer:checked ~ .grid-card .question-answers-8:has(input:checked) input[value="C"]:not(:checked) ~ .answer-result::after,
+.check-answer:checked ~ .grid-card .question-answers-9:has(input:checked) input[value="A"]:not(:checked) ~ .answer-result::after,
+.check-answer:checked ~ .grid-card .question-answers-9:has(input:checked) input[value="B"]:not(:checked) ~ .answer-result::after,
+.check-answer:checked ~ .grid-card .question-answers-9:has(input:checked) input[value="D"]:not(:checked) ~ .answer-result::after,
+.check-answer:checked ~ .grid-card .question-answers-10:has(input:checked) input[value="B"]:not(:checked) ~ .answer-result::after,
+.check-answer:checked ~ .grid-card .question-answers-10:has(input:checked) input[value="D"]:not(:checked) ~ .answer-result::after{
     content: "\26AA";
     color: var(--light-red-color);
     font-weight: bold;
