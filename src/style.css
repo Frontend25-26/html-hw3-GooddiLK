@@ -34,9 +34,19 @@ body {
     display: flow-root; /*Ограничение маржина детей*/
 }
 
-.check-answer {
-    display: none;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    overflow: hidden;
+    white-space: nowrap;
 }
+
 
 .display-answers-block {
     display: flex;
@@ -62,16 +72,28 @@ body {
             transform 0.1s ease;
 }
 
-.display-answers:hover {
-    background-color: var(--vety-light-gray-color);
-    color: var(--answer-variant-back-color);
-    border-color: var(--answer-variant-back-color);
+/*.display-answers:hover {*/
+/*    background-color: var(--vety-light-gray-color);*/
+/*    color: var(--answer-variant-back-color);*/
+/*    border-color: var(--answer-variant-back-color);*/
+/*}*/
+@media (hover:hover) and (pointer:fine) {
+    .display-answers:hover {
+        background-color: var(--vety-light-gray-color);
+        color: var(--answer-variant-back-color);
+        border-color: var(--answer-variant-back-color);
+    }
 }
 
 .display-answers:active {
     transform: scale(0.98);
     background-color: var(--answer-variant-back-color);
     color: var(--vety-light-gray-color);
+}
+
+.display-answers:focus-visible {
+    outline: 3px solid var(--answer-variant-back-color);
+    outline-offset: 4px;
 }
 
 fieldset {

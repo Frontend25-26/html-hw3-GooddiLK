@@ -1,50 +1,50 @@
-.check-answer:checked ~ .grid-card .question-answers-1 input[value="B"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-2 input[value="C"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-3 input[value="C"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-4 input[value="A"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-5 input[value="C"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-6 input[value="B"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-7 input[value="D"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-8 input[value="A"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-8 input[value="C"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-9 input[value="A"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-9 input[value="B"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-9 input[value="D"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-10 input[value="B"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-10 input[value="D"]:checked ~ .answer-result::after{
+.quiz:has(.check-answer:checked) .grid-card .question-answers-1 input[value="B"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-2 input[value="C"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-3 input[value="C"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-4 input[value="A"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-5 input[value="C"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-6 input[value="B"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-7 input[value="D"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-8 input[value="A"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-8 input[value="C"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-9 input[value="A"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-9 input[value="B"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-9 input[value="D"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-10 input[value="B"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-10 input[value="D"]:checked ~ .answer-result::after{
     content: "✅";
     color: var(--vety-light-gray-color);
     font-weight: bold;
 }
 
-.check-answer:checked ~ .grid-card .question-answers-1 input:not([value="B"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-2 input[value="A"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-2 input[value="B"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-2 input[value="D"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-3 input:not([value="C"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-4 input:not([value="A"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-5 input:not([value="C"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-6 input:not([value="B"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-7 input:not([value="D"]):checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-8 input[value="B"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-8 input[value="D"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-9 input[value="C"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-10 input[value="A"]:checked ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-10 input[value="C"]:checked ~ .answer-result::after {
+.quiz:has(.check-answer:checked) .grid-card .question-answers-1 input:not([value="B"]):checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-2 input[value="A"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-2 input[value="B"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-2 input[value="D"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-3 input:not([value="C"]):checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-4 input:not([value="A"]):checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-5 input:not([value="C"]):checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-6 input:not([value="B"]):checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-7 input:not([value="D"]):checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-8 input[value="B"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-8 input[value="D"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-9 input[value="C"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-10 input[value="A"]:checked ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-10 input[value="C"]:checked ~ .answer-result::after {
     content: "❌";
     color: var(--light-red-color);
     font-weight: bold;
 }
 
 
-.check-answer:checked ~ .grid-card .question-answers-2:has(input:checked) input[value="C"]:not(:checked) ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-8:has(input:checked) input[value="A"]:not(:checked) ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-8:has(input:checked) input[value="C"]:not(:checked) ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-9:has(input:checked) input[value="A"]:not(:checked) ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-9:has(input:checked) input[value="B"]:not(:checked) ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-9:has(input:checked) input[value="D"]:not(:checked) ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-10:has(input:checked) input[value="B"]:not(:checked) ~ .answer-result::after,
-.check-answer:checked ~ .grid-card .question-answers-10:has(input:checked) input[value="D"]:not(:checked) ~ .answer-result::after{
+.quiz:has(.check-answer:checked) .grid-card .question-answers-2:has(input:checked) input[value="C"]:not(:checked) ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-8:has(input:checked) input[value="A"]:not(:checked) ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-8:has(input:checked) input[value="C"]:not(:checked) ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-9:has(input:checked) input[value="A"]:not(:checked) ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-9:has(input:checked) input[value="B"]:not(:checked) ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-9:has(input:checked) input[value="D"]:not(:checked) ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-10:has(input:checked) input[value="B"]:not(:checked) ~ .answer-result::after,
+.quiz:has(.check-answer:checked) .grid-card .question-answers-10:has(input:checked) input[value="D"]:not(:checked) ~ .answer-result::after{
     content: "\26AA";
     color: var(--light-red-color);
     font-weight: bold;
